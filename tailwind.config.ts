@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom color palette for our application
+				brand: {
+					50: '#e6f5ff',
+					100: '#b3e0ff',
+					200: '#80ccff',
+					300: '#4db8ff',
+					400: '#1aa3ff',
+					500: '#0080e6',
+					600: '#0066b3',
+					700: '#004c80',
+					800: '#00334d',
+					900: '#00192b'
+				},
+				teal: {
+					50: '#e6fffc',
+					100: '#b3fff5',
+					200: '#80ffee',
+					300: '#4dffe7',
+					400: '#1affe0',
+					500: '#00e6c7',
+					600: '#00b399',
+					700: '#00806c',
+					800: '#004d40',
+					900: '#002a22'
 				}
 			},
 			borderRadius: {
@@ -84,11 +110,19 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 5s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-hero': 'linear-gradient(90deg, hsl(204, 100%, 45%) 0%, hsl(174, 100%, 45%) 100%)'
 			}
 		}
 	},
